@@ -25,7 +25,7 @@ resource "azurerm_virtual_network" "chrisnoon-vnet" {
 resource "azurerm_subnet" "example" {
   count               = 2
   name                = "subnet-${count.index}"
-  resource_group_name = azurerm_resource_group.chrisnoon-uk-south.name
-  virtual_network_name = azurerm_virtual_network.chrisnoon-uk-south.name
+  resource_group_name = azurerm_resource_group.chrisnoon-vnet.name
+  virtual_network_name = azurerm_virtual_network.chrisnoon-vnet.name
   address_prefixes    = ["10.21.${count.index + 1}.0/24"]
 }

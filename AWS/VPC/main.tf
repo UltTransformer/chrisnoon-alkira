@@ -32,6 +32,7 @@ resource "aws_subnet" "chrisnoon-subnet2" {
   tags = {
     Name = "chrisnoon-subnet2"
   }
+}
 
 #####
 

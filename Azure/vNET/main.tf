@@ -11,6 +11,8 @@ provider "azurerm" {
   skip_provider_registration = true
 }
 
+# Create Chris Noon's VPC
+
 resource "azurerm_resource_group" "chrisnoon-uk-south" {
   name     = "chrisnoon-uk-south"
   location = "UK South"
@@ -29,4 +31,52 @@ resource "azurerm_subnet" "example" {
   resource_group_name = azurerm_resource_group.chrisnoon-uk-south.name
   virtual_network_name = azurerm_virtual_network.chrisnoon-vnet.name
   address_prefixes    = ["10.21.${count.index + 1}.0/24"]
+}
+
+#####
+
+# Create Ian Plummer's VPC
+
+resource "azurerm_resource_group" "ianplummer-uk-south" {
+  name     = "ianplummer-uk-south"
+  location = "UK South"
+}
+
+resource "azurerm_virtual_network" "ianplummer-vnet" {
+  name                = "ianplummer-vnet"
+  address_space       = ["10.31.0.0/16"]
+  location            = azurerm_resource_group.ianplummer-uk-south.location
+  resource_group_name = azurerm_resource_group.ianplummer-uk-south.name
+}
+
+resource "azurerm_subnet" "example" {
+  count               = 2
+  name                = "subnet-${count.index}"
+  resource_group_name = azurerm_resource_group.ianplummer-uk-south.name
+  virtual_network_name = azurerm_virtual_network.ianplummer-vnet.name
+  address_prefixes    = ["10.31.${count.index + 1}.0/24"]
+}
+
+#####
+
+# Create Phil Oultrams's VPC
+
+resource "azurerm_resource_group" "philoultram-uk-south" {
+  name     = "philoultram-uk-south"
+  location = "UK South"
+}
+
+resource "azurerm_virtual_network" "philoultram-vnet" {
+  name                = "philoultram-vnet"
+  address_space       = ["10.41.0.0/16"]
+  location            = azurerm_resource_group.philoultram-uk-south.location
+  resource_group_name = azurerm_resource_group.philoultram-uk-south.name
+}
+
+resource "azurerm_subnet" "example" {
+  count               = 2
+  name                = "subnet-${count.index}"
+  resource_group_name = azurerm_resource_group.philoultram-uk-south.name
+  virtual_network_name = azurerm_virtual_network.philoultram-vnet.name
+  address_prefixes    = ["10.41.${count.index + 1}.0/24"]
 }

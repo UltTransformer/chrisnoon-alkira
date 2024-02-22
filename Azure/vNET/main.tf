@@ -25,7 +25,7 @@ resource "azurerm_virtual_network" "chrisnoon-vnet" {
   resource_group_name = azurerm_resource_group.chrisnoon-uk-south.name
 }
 
-resource "azurerm_subnet" "example" {
+resource "azurerm_subnet" "chrisnoon-subnets" {
   count               = 2
   name                = "subnet-${count.index}"
   resource_group_name = azurerm_resource_group.chrisnoon-uk-south.name
@@ -49,7 +49,7 @@ resource "azurerm_virtual_network" "ianplummer-vnet" {
   resource_group_name = azurerm_resource_group.ianplummer-uk-south.name
 }
 
-resource "azurerm_subnet" "example" {
+resource "azurerm_subnet" "ianplummer-subnets" {
   count               = 2
   name                = "subnet-${count.index}"
   resource_group_name = azurerm_resource_group.ianplummer-uk-south.name
@@ -73,7 +73,7 @@ resource "azurerm_virtual_network" "philoultram-vnet" {
   resource_group_name = azurerm_resource_group.philoultram-uk-south.name
 }
 
-resource "azurerm_subnet" "example" {
+resource "azurerm_subnet" "philoultram-subnets" {
   count               = 2
   name                = "subnet-${count.index}"
   resource_group_name = azurerm_resource_group.philoultram-uk-south.name

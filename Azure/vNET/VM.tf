@@ -5,7 +5,7 @@ resource "azurerm_network_interface" "chrisnoon-vm1-interface" {
 
   ip_configuration {
     name                          = "internal"
-    subnet_id                     = azurerm_subnet.example.id
+    subnet_id                     = azurerm_subnet.chrisnoon-subnets[0].id
     private_ip_address_allocation = "Dynamic"
   }
 }

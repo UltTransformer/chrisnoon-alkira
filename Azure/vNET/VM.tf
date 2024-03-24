@@ -16,7 +16,7 @@ resource "azurerm_windows_virtual_machine" "chrisnoon-vm1-vm" {
   location              = azurerm_resource_group.chrisnoon-uk-south.location
   size                  = "Standard_DS1_v2"
   admin_username        = "adminuser"
-  admin_password        = "a1k1ra!"
+  admin_password        = "a1k1ra!!!"
   network_interface_ids = [azurerm_network_interface.chrisnoon-vm1-interface.id]
 
   os_disk {

@@ -17,7 +17,7 @@ resource "azurerm_windows_virtual_machine" "chrisnoon-vm1-vm" {
   size                  = "Standard_DS1_v2"
   admin_username        = "adminuser"
   admin_password        = "a1k1ra!"
-  network_interface_ids = [azurerm_network_interface.example[count.index].id]
+  network_interface_ids = [azurerm_network_interface.chrisnoon-vm1-interface.id]
 
   os_disk {
     caching              = "ReadWrite"

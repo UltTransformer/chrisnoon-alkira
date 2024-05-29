@@ -12,5 +12,5 @@ terraform {
 
 provider "alkira" {
   portal  = "chrisnoon.preprod.alkira3.net"
-  api_key = "pvmJUyjPCQ9WDShaIpWRQDeO7tnG0ZZ~lKU7gqAFASGDfwPNZn3knl9KxXBSfFy0"
+  api_key = "aYtDIxHf7kISSwF3gzs2finHRkwHJbL~RnIVJ6GMkg0sazA8btmJf91wi6LWEdN7"
 }

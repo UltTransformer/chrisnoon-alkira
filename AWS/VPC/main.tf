@@ -70,7 +70,7 @@ resource "aws_subnet" "philoultram-subnet2" {
 
 # Create Ian Plummer's VPC
 resource "aws_vpc" "ianplummer-vpc" {
-  cidr_block = "10.12.0.0/16"
+  cidr_block = "10.32.0.0/16"
   enable_dns_support = true
   enable_dns_hostnames = true
   tags = {
@@ -81,7 +81,7 @@ resource "aws_vpc" "ianplummer-vpc" {
 # Create subnet 1
 resource "aws_subnet" "ianplummer-subnet1" {
   vpc_id                  = aws_vpc.ianplummer-vpc.id
-  cidr_block              = "10.12.1.0/24"
+  cidr_block              = "10.32.1.0/24"
   availability_zone       = "eu-west-2a"
   tags = {
     Name = "ianplummer-subnet1"
@@ -91,7 +91,7 @@ resource "aws_subnet" "ianplummer-subnet1" {
 # Create subnet 2
 resource "aws_subnet" "ianplummer-subnet2" {
   vpc_id                  = aws_vpc.ianplummer-vpc.id
-  cidr_block              = "10.12.2.0/24"
+  cidr_block              = "10.32.2.0/24"
   availability_zone       = "eu-west-2b"
   tags = {
     Name = "ianplummer-subnet2"

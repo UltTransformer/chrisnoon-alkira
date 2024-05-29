@@ -1,9 +1,9 @@
 # Variables
 
-variable "portal" {
+variable "env0_var_portal" {
   type    = string
 }
 
-variable "api-key" {
+variable "env0_var_api_key" {
   type    = string
 }

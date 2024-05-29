@@ -11,6 +11,6 @@ terraform {
 # Authentication
 
 provider "alkira" {
-  portal  = var.portal
-  api_key = var.api-key
+  portal  = var.env0_var_portal
+  api_key = var.env0_var_api_key
 }

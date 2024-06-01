@@ -166,6 +166,7 @@ resource "aws_vpc" "sydney-vpc" {
   }
 }
 resource "aws_subnet" "sydney-subnet1" {
+  provider                = aws.ap-southeast-2
   vpc_id                  = aws_vpc.sydney-vpc.id
   cidr_block              = "10.100.1.0/25"
   availability_zone       = "ap-southeast-2a"

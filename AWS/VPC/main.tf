@@ -170,7 +170,7 @@ resource "aws_vpc" "sydney-vpc" {
 resource "aws_subnet" "sydney-subnet1" {
   vpc_id                  = aws_vpc.sydney-vpc.id
   cidr_block              = "10.100.1.0/25"
-  availability_zone       = "ap-southeast-2"
+  availability_zone       = "ap-southeast-2a"
   tags = {
     Name = "sydney-subnet1"
   }
@@ -178,7 +178,7 @@ resource "aws_subnet" "sydney-subnet1" {
 resource "aws_subnet" "sydney-subnet2" {
   vpc_id                  = aws_vpc.sydney-vpc.id
   cidr_block              = "10.100.1.128/25"
-  availability_zone       = "ap-southeast-2"
+  availability_zone       = "ap-southeast-2b"
   tags = {
     Name = "sydney-subnet2"
   }
@@ -197,7 +197,7 @@ resource "aws_vpc" "mumbai-vpc" {
 resource "aws_subnet" "mumbai-subnet1" {
   vpc_id                  = aws_vpc.mumbai-vpc.id
   cidr_block              = "10.100.2.0/25"
-  availability_zone       = "ap-south-1"
+  availability_zone       = "ap-south-1a"
   tags = {
     Name = "mumbai-subnet1"
   }
@@ -205,7 +205,7 @@ resource "aws_subnet" "mumbai-subnet1" {
 resource "aws_subnet" "mumbai-subnet2" {
   vpc_id                  = aws_vpc.mumbai-vpc.id
   cidr_block              = "10.100.2.128/25"
-  availability_zone       = "ap-south-1"
+  availability_zone       = "ap-south-1b"
   tags = {
     Name = "mumbai-subnet2"
   }
@@ -224,7 +224,7 @@ resource "aws_vpc" "virginia-vpc" {
 resource "aws_subnet" "virginia-subnet1" {
   vpc_id                  = aws_vpc.virginia-vpc.id
   cidr_block              = "10.100.3.0/25"
-  availability_zone       = "us-east-1"
+  availability_zone       = "us-east-1aa"
   tags = {
     Name = "virginia-subnet1"
   }
@@ -232,7 +232,7 @@ resource "aws_subnet" "virginia-subnet1" {
 resource "aws_subnet" "virginia-subnet2" {
   vpc_id                  = aws_vpc.virginia-vpc.id
   cidr_block              = "10.100.3.128/25"
-  availability_zone       = "us-east-1"
+  availability_zone       = "us-east-1b"
   tags = {
     Name = "virginia-subnet2"
   }
@@ -251,7 +251,7 @@ resource "aws_vpc" "ireland-vpc" {
 resource "aws_subnet" "ireland-subnet1" {
   vpc_id                  = aws_vpc.ireland-vpc.id
   cidr_block              = "10.100.4.0/25"
-  availability_zone       = "eu-west-1"
+  availability_zone       = "eu-west-1a"
   tags = {
     Name = "ireland-subnet1"
   }
@@ -259,7 +259,7 @@ resource "aws_subnet" "ireland-subnet1" {
 resource "aws_subnet" "ireland-subnet2" {
   vpc_id                  = aws_vpc.ireland-vpc.id
   cidr_block              = "10.100.4.128/25"
-  availability_zone       = "eu-west-1"
+  availability_zone       = "eu-west-1b"
   tags = {
     Name = "ireland-subnet2"
   }
@@ -278,7 +278,7 @@ resource "aws_vpc" "hongkong-vpc" {
 resource "aws_subnet" "hongkong-subnet1" {
   vpc_id                  = aws_vpc.hongkong-vpc.id
   cidr_block              = "10.100.5.0/25"
-  availability_zone       = "ap-east-1"
+  availability_zone       = "ap-east-1a"
   tags = {
     Name = "hongkong-subnet1"
   }
@@ -286,7 +286,7 @@ resource "aws_subnet" "hongkong-subnet1" {
 resource "aws_subnet" "hongkong-subnet2" {
   vpc_id                  = aws_vpc.hongkong-vpc.id
   cidr_block              = "10.100.5.128/25"
-  availability_zone       = "ap-east-1"
+  availability_zone       = "ap-east-1b"
   tags = {
     Name = "hongkong-subnet2"
   }
@@ -305,7 +305,7 @@ resource "aws_vpc" "california-vpc" {
 resource "aws_subnet" "california-subnet1" {
   vpc_id                  = aws_vpc.california-vpc.id
   cidr_block              = "10.100.6.0/25"
-  availability_zone       = "us-west-1"
+  availability_zone       = "us-west-1a"
   tags = {
     Name = "california-subnet1"
   }
@@ -313,7 +313,7 @@ resource "aws_subnet" "california-subnet1" {
 resource "aws_subnet" "california-subnet2" {
   vpc_id                  = aws_vpc.california-vpc.id
   cidr_block              = "10.100.6.128/25"
-  availability_zone       = "us-west-1"
+  availability_zone       = "us-west-1b"
   tags = {
     Name = "california-subnet2"
   }
@@ -332,7 +332,7 @@ resource "aws_vpc" "oregon-vpc" {
 resource "aws_subnet" "oregon-subnet1" {
   vpc_id                  = aws_vpc.oregon-vpc.id
   cidr_block              = "10.100.7.0/25"
-  availability_zone       = "us-west-2"
+  availability_zone       = "us-west-2a"
   tags = {
     Name = "oregon-subnet1"
   }
@@ -340,7 +340,7 @@ resource "aws_subnet" "oregon-subnet1" {
 resource "aws_subnet" "oregon-subnet2" {
   vpc_id                  = aws_vpc.oregon-vpc.id
   cidr_block              = "10.100.7.128/25"
-  availability_zone       = "us-west-2"
+  availability_zone       = "us-west-2b"
   tags = {
     Name = "oregon-subnet2"
   }
@@ -359,7 +359,7 @@ resource "aws_vpc" "frankfurt-vpc" {
 resource "aws_subnet" "frankfurt-subnet1" {
   vpc_id                  = aws_vpc.frankfurt-vpc.id
   cidr_block              = "10.100.8.0/25"
-  availability_zone       = "eu-central-1"
+  availability_zone       = "eu-central-1a"
   tags = {
     Name = "frankfurt-subnet1"
   }
@@ -367,7 +367,7 @@ resource "aws_subnet" "frankfurt-subnet1" {
 resource "aws_subnet" "frankfurt-subnet2" {
   vpc_id                  = aws_vpc.frankfurt-vpc.id
   cidr_block              = "10.100.8.128/25"
-  availability_zone       = "eu-central-1"
+  availability_zone       = "eu-central-1b"
   tags = {
     Name = "frankfurt-subnet2"
   }
@@ -386,7 +386,7 @@ resource "aws_vpc" "tokyo-vpc" {
 resource "aws_subnet" "tokyo-subnet1" {
   vpc_id                  = aws_vpc.tokyo-vpc.id
   cidr_block              = "10.100.9.0/25"
-  availability_zone       = "ap-northeast-1"
+  availability_zone       = "ap-northeast-1a"
   tags = {
     Name = "tokyo-subnet1"
   }
@@ -394,7 +394,7 @@ resource "aws_subnet" "tokyo-subnet1" {
 resource "aws_subnet" "tokyo-subnet2" {
   vpc_id                  = aws_vpc.tokyo-vpc.id
   cidr_block              = "10.100.9.128/25"
-  availability_zone       = "ap-northeast-1"
+  availability_zone       = "ap-northeast-1b"
   tags = {
     Name = "tokyo-subnet2"
   }
@@ -413,7 +413,7 @@ resource "aws_vpc" "ohio-vpc" {
 resource "aws_subnet" "ohio-subnet1" {
   vpc_id                  = aws_vpc.ohio-vpc.id
   cidr_block              = "10.100.10.0/25"
-  availability_zone       = "us-east-2"
+  availability_zone       = "us-east-2a"
   tags = {
     Name = "ohio-subnet1"
   }
@@ -421,7 +421,7 @@ resource "aws_subnet" "ohio-subnet1" {
 resource "aws_subnet" "ohio-subnet2" {
   vpc_id                  = aws_vpc.ohio-vpc.id
   cidr_block              = "10.100.10.128/25"
-  availability_zone       = "us-east-2"
+  availability_zone       = "us-east-2b"
   tags = {
     Name = "ohio-subnet2"
   }
@@ -440,7 +440,7 @@ resource "aws_vpc" "singapore-vpc" {
 resource "aws_subnet" "singapore-subnet1" {
   vpc_id                  = aws_vpc.singapore-vpc.id
   cidr_block              = "10.100.11.0/25"
-  availability_zone       = "ap-southeast-1"
+  availability_zone       = "ap-southeast-1a"
   tags = {
     Name = "singapore-subnet1"
   }
@@ -448,7 +448,7 @@ resource "aws_subnet" "singapore-subnet1" {
 resource "aws_subnet" "singapore-subnet2" {
   vpc_id                  = aws_vpc.singapore-vpc.id
   cidr_block              = "10.100.11.128/25"
-  availability_zone       = "ap-southeast-1"
+  availability_zone       = "ap-southeast-1b"
   tags = {
     Name = "singapore-subnet2"
   }

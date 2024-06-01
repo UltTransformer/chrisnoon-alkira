@@ -12,7 +12,6 @@ provider "aws" {
 
 # Create Chris Noon's VPC
 resource "aws_vpc" "chrisnoon-vpc" {
-  provider = aws.eu-west-2
   cidr_block = "10.12.0.0/16"
   enable_dns_support = true
   enable_dns_hostnames = true
@@ -45,7 +44,6 @@ resource "aws_subnet" "chrisnoon-subnet2" {
 
 # Create Phil Oultram's VPC
 resource "aws_vpc" "philoultram-vpc" {
-  provider = aws.eu-west-2
   cidr_block = "10.22.0.0/16"
   enable_dns_support = true
   enable_dns_hostnames = true
@@ -78,7 +76,6 @@ resource "aws_subnet" "philoultram-subnet2" {
 
 # Create Ian Plummer's VPC
 resource "aws_vpc" "ianplummer-vpc" {
-  provider = aws.eu-west-2
   cidr_block = "10.32.0.0/16"
   enable_dns_support = true
   enable_dns_hostnames = true

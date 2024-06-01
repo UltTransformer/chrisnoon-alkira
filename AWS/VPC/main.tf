@@ -5,8 +5,8 @@ provider "aws" {
 }
 
 provider "aws" {
-  region = "ap-southeast"
-  alias = "ap-southeast"
+  region = "ap-southeast-2"
+  alias = "ap-southeast-2"
 }
 
 # Create Chris Noon's VPC
@@ -108,7 +108,7 @@ resource "aws_subnet" "ianplummer-subnet2" {
 
 # # Student 1
 resource "aws_vpc" "sydney-vpc" {
-  provider = aws.ap-southeast
+  provider = aws.ap-southeast-2
   cidr_block = "10.100.1.0/24"
   enable_dns_support = true
   enable_dns_hostnames = true

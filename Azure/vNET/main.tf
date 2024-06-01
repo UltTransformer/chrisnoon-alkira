@@ -1,7 +1,7 @@
 terraform {
   required_providers {
     azurerm = {
-      source  = "hashicorp/azurerm"
+      source = "hashicorp/azurerm"
     }
   }
 }
@@ -26,11 +26,11 @@ resource "azurerm_virtual_network" "chrisnoon-vnet" {
 }
 
 resource "azurerm_subnet" "chrisnoon-subnets" {
-  count               = 2
-  name                = "subnet-${count.index}"
-  resource_group_name = azurerm_resource_group.chrisnoon-uk-south.name
+  count                = 2
+  name                 = "subnet-${count.index}"
+  resource_group_name  = azurerm_resource_group.chrisnoon-uk-south.name
   virtual_network_name = azurerm_virtual_network.chrisnoon-vnet.name
-  address_prefixes    = ["10.21.${count.index + 1}.0/24"]
+  address_prefixes     = ["10.21.${count.index + 1}.0/24"]
 }
 
 #####
@@ -50,11 +50,11 @@ resource "azurerm_virtual_network" "ianplummer-vnet" {
 }
 
 resource "azurerm_subnet" "ianplummer-subnets" {
-  count               = 2
-  name                = "subnet-${count.index}"
-  resource_group_name = azurerm_resource_group.ianplummer-uk-south.name
+  count                = 2
+  name                 = "subnet-${count.index}"
+  resource_group_name  = azurerm_resource_group.ianplummer-uk-south.name
   virtual_network_name = azurerm_virtual_network.ianplummer-vnet.name
-  address_prefixes    = ["10.31.${count.index + 1}.0/24"]
+  address_prefixes     = ["10.31.${count.index + 1}.0/24"]
 }
 
 #####
@@ -74,9 +74,9 @@ resource "azurerm_virtual_network" "philoultram-vnet" {
 }
 
 resource "azurerm_subnet" "philoultram-subnets" {
-  count               = 2
-  name                = "subnet-${count.index}"
-  resource_group_name = azurerm_resource_group.philoultram-uk-south.name
+  count                = 2
+  name                 = "subnet-${count.index}"
+  resource_group_name  = azurerm_resource_group.philoultram-uk-south.name
   virtual_network_name = azurerm_virtual_network.philoultram-vnet.name
-  address_prefixes    = ["10.41.${count.index + 1}.0/24"]
+  address_prefixes     = ["10.41.${count.index + 1}.0/24"]
 }

@@ -19,16 +19,16 @@
 # }
 
 resource "alkira_connector_aws_vpc" "chrisnoon-vpc" {
-  name           = "chrisnoon-vpc"
-  vpc_id         = "vpc-021eec53052212bdc"
-  vpc_cidr       = [ "10.12.0.0/16" ]
+  name     = "chrisnoon-vpc"
+  vpc_id   = "vpc-021eec53052212bdc"
+  vpc_cidr = ["10.12.0.0/16"]
 
   aws_account_id = "138319602003"
   aws_region     = "eu-west-2"
 
-  credential_id  = "5207685e-cf39-4253-b9b0-84a4b72a046a"
-  cxp            = "US-WEST-1"
-  group          = "chrisnoon-aws"
-  segment_id     = "9397"
-  size           = "SMALL"
+  credential_id = "5207685e-cf39-4253-b9b0-84a4b72a046a"
+  cxp           = "US-WEST-1"
+  group         = "chrisnoon-aws"
+  segment_id    = "9397"
+  size          = "SMALL"
 }

@@ -80,3 +80,27 @@ resource "azurerm_subnet" "philoultram-subnets" {
   virtual_network_name = azurerm_virtual_network.philoultram-vnet.name
   address_prefixes     = ["10.41.${count.index + 1}.0/24"]
 }
+
+########################################################
+# Cusotmer Lab
+
+# Student 1
+resource "azurerm_resource_group" "sydney-vnet-student" {
+  name     = "sydney-vnet-student"
+  location = "Australia Central"
+}
+
+resource "azurerm_virtual_network" "sydney-vnet-student" {
+  name                = "sydney-vnet-student"
+  address_space       = ["10.150.1.0/24"]
+  location            = azurerm_resource_group.sydney-vnet-student.location
+  resource_group_name = azurerm_resource_group.sydney-vnet-student.name
+}
+
+resource "azurerm_subnet" "sydney-vnet-student-subnets" {
+  count                = 2
+  name                 = "subnet-${count.index}"
+  resource_group_name  = azurerm_resource_group.sydney-vnet-student.name
+  virtual_network_name = azurerm_virtual_network.sydney-vnet-student.name
+  address_prefixes     = ["10.150.1.${count.index + 128}/25"]
+}

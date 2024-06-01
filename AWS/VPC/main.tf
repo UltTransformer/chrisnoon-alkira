@@ -227,7 +227,7 @@ resource "aws_subnet" "virginia-subnet1" {
   provider          = aws.us-east-1
   vpc_id            = aws_vpc.virginia-vpc-student.id
   cidr_block        = "10.100.3.0/25"
-  availability_zone = "us-east-1aa"
+  availability_zone = "us-east-1a"
   tags = {
     Name = "virginia-subnet1"
   }
@@ -314,7 +314,7 @@ resource "aws_subnet" "california-subnet1" {
   provider          = aws.us-west-1
   vpc_id            = aws_vpc.california-vpc-student.id
   cidr_block        = "10.100.6.0/25"
-  availability_zone = "us-west-1a"
+  availability_zone = "us-west-1b"
   tags = {
     Name = "california-subnet1"
   }
@@ -323,7 +323,7 @@ resource "aws_subnet" "california-subnet2" {
   provider          = aws.us-west-1
   vpc_id            = aws_vpc.california-vpc-student.id
   cidr_block        = "10.100.6.128/25"
-  availability_zone = "us-west-1b"
+  availability_zone = "us-west-1c"
   tags = {
     Name = "california-subnet2"
   }
@@ -410,7 +410,7 @@ resource "aws_subnet" "tokyo-subnet2" {
   provider          = aws.ap-northeast-1
   vpc_id            = aws_vpc.tokyo-vpc-student.id
   cidr_block        = "10.100.9.128/25"
-  availability_zone = "ap-northeast-1b"
+  availability_zone = "ap-northeast-1c"
   tags = {
     Name = "tokyo-subnet2"
   }

@@ -99,8 +99,8 @@ resource "azurerm_virtual_network" "sydney-vnet-student" {
 
 resource "azurerm_subnet" "sydney-vnet-student-subnets" {
   count                = 2
-  name                 = "subnet-${count.index}"
+  name                 = "subnet-${0 + 1}"
   resource_group_name  = azurerm_resource_group.sydney-vnet-student.name
   virtual_network_name = azurerm_virtual_network.sydney-vnet-student.name
-  address_prefixes     = ["10.150.1.${count.index + 127}/25"]
+  address_prefixes     = ["10.150.1.${0 + 128}/25"]
 }

@@ -107,15 +107,15 @@ resource "aws_subnet" "ianplummer-subnet2" {
 # Cusotmer Lab
 
 # # Student 1
-resource "aws_vpc" "sydney-vpc" {
-  provider = aws.ap-southeast-2
-  cidr_block = "10.100.1.0/24"
-  enable_dns_support = true
-  enable_dns_hostnames = true
-  tags = {
-    Name = "sydney-vpc"
-  }
-}
+# resource "aws_vpc" "sydney-vpc" {
+#   provider = aws.ap-southeast-2
+#   cidr_block = "10.100.1.0/24"
+#   enable_dns_support = true
+#   enable_dns_hostnames = true
+#   tags = {
+#     Name = "sydney-vpc"
+#   }
+# }
 # resource "aws_subnet" "sydney-subnet1" {
 #   vpc_id                  = aws_vpc.sydney-vpc.id
 #   cidr_block              = "10.100.1.0/25"

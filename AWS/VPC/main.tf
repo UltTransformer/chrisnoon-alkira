@@ -5,10 +5,10 @@ provider "aws" {
   alias = "eu-west-2"
 }
 
-provider "aws" {
-  region = "ap-southeast"
-  alias = "ap-southeast"
-}
+# provider "aws" {
+#   region = "ap-southeast"
+#   alias = "ap-southeast"
+# }
 
 # Create Chris Noon's VPC
 resource "aws_vpc" "chrisnoon-vpc" {

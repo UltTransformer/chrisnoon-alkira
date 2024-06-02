@@ -104,3 +104,213 @@ resource "azurerm_subnet" "sydney-vnet-student-subnets" {
   virtual_network_name = azurerm_virtual_network.sydney-vnet-student.name
   address_prefixes     = ["10.150.1.0/25"]
 }
+
+# Student 2
+resource "azurerm_resource_group" "mumbai-vnet-student" {
+  name     = "mumbai-vnet-student"
+  location = "Central India"
+}
+
+resource "azurerm_virtual_network" "mumbai-vnet-student" {
+  name                = "mumbai-vnet-student"
+  address_space       = ["10.150.2.0/24"]
+  location            = azurerm_resource_group.mumbai-vnet-student.location
+  resource_group_name = azurerm_resource_group.mumbai-vnet-student.name
+}
+
+resource "azurerm_subnet" "mumbai-vnet-student-subnets" {
+  count                = 1
+  name                 = "subnet-${count.index}"
+  resource_group_name  = azurerm_resource_group.mumbai-vnet-student.name
+  virtual_network_name = azurerm_virtual_network.mumbai-vnet-student.name
+  address_prefixes     = ["10.150.2.0/25"]
+}
+
+# Student 3
+resource "azurerm_resource_group" "virginia-vnet-student" {
+  name     = "virginia-vnet-student"
+  location = "East US"
+}
+
+resource "azurerm_virtual_network" "virginia-vnet-student" {
+  name                = "virginia-vnet-student"
+  address_space       = ["10.150.3.0/24"]
+  location            = azurerm_resource_group.virginia-vnet-student.location
+  resource_group_name = azurerm_resource_group.virginia-vnet-student.name
+}
+
+resource "azurerm_subnet" "virginia-vnet-student-subnets" {
+  count                = 1
+  name                 = "subnet-${count.index}"
+  resource_group_name  = azurerm_resource_group.virginia-vnet-student.name
+  virtual_network_name = azurerm_virtual_network.virginia-vnet-student.name
+  address_prefixes     = ["10.150.3.0/25"]
+}
+
+# Student 4
+resource "azurerm_resource_group" "ireland-vnet-student" {
+  name     = "ireland-vnet-student"
+  location = "North Europe"
+}
+
+resource "azurerm_virtual_network" "ireland-vnet-student" {
+  name                = "ireland-vnet-student"
+  address_space       = ["10.150.4.0/24"]
+  location            = azurerm_resource_group.ireland-vnet-student.location
+  resource_group_name = azurerm_resource_group.ireland-vnet-student.name
+}
+
+resource "azurerm_subnet" "ireland-vnet-student-subnets" {
+  count                = 1
+  name                 = "subnet-${count.index}"
+  resource_group_name  = azurerm_resource_group.ireland-vnet-student.name
+  virtual_network_name = azurerm_virtual_network.ireland-vnet-student.name
+  address_prefixes     = ["10.150.4.0/25"]
+}
+
+# Student 5
+resource "azurerm_resource_group" "hongkong-vnet-student" {
+  name     = "hongkong-vnet-student"
+  location = "East Asia"
+}
+
+resource "azurerm_virtual_network" "hongkong-vnet-student" {
+  name                = "hongkong-vnet-student"
+  address_space       = ["10.150.5.0/24"]
+  location            = azurerm_resource_group.hongkong-vnet-student.location
+  resource_group_name = azurerm_resource_group.hongkong-vnet-student.name
+}
+
+resource "azurerm_subnet" "hongkong-vnet-student-subnets" {
+  count                = 1
+  name                 = "subnet-${count.index}"
+  resource_group_name  = azurerm_resource_group.hongkong-vnet-student.name
+  virtual_network_name = azurerm_virtual_network.hongkong-vnet-student.name
+  address_prefixes     = ["10.150.5.0/25"]
+}
+
+# Student 6
+resource "azurerm_resource_group" "california-vnet-student" {
+  name     = "california-vnet-student"
+  location = "West US"
+}
+
+resource "azurerm_virtual_network" "california-vnet-student" {
+  name                = "california-vnet-student"
+  address_space       = ["10.150.6.0/24"]
+  location            = azurerm_resource_group.california-vnet-student.location
+  resource_group_name = azurerm_resource_group.california-vnet-student.name
+}
+
+resource "azurerm_subnet" "california-vnet-student-subnets" {
+  count                = 1
+  name                 = "subnet-${count.index}"
+  resource_group_name  = azurerm_resource_group.california-vnet-student.name
+  virtual_network_name = azurerm_virtual_network.california-vnet-student.name
+  address_prefixes     = ["10.150.6.0/25"]
+}
+
+# Student 7
+resource "azurerm_resource_group" "origon-vnet-student" {
+  name     = "origon-vnet-student"
+  location = "East US 2"
+}
+
+resource "azurerm_virtual_network" "origon-vnet-student" {
+  name                = "origon-vnet-student"
+  address_space       = ["10.150.7.0/24"]
+  location            = azurerm_resource_group.origon-vnet-student.location
+  resource_group_name = azurerm_resource_group.origon-vnet-student.name
+}
+
+resource "azurerm_subnet" "origon-vnet-student-subnets" {
+  count                = 1
+  name                 = "subnet-${count.index}"
+  resource_group_name  = azurerm_resource_group.origon-vnet-student.name
+  virtual_network_name = azurerm_virtual_network.origon-vnet-student.name
+  address_prefixes     = ["10.150.7.0/25"]
+}
+
+# Student 8
+resource "azurerm_resource_group" "frankfurt-vnet-student" {
+  name     = "frankfurt-vnet-student"
+  location = "Germany West Central"
+}
+
+resource "azurerm_virtual_network" "frankfurt-vnet-student" {
+  name                = "frankfurt-vnet-student"
+  address_space       = ["10.150.8.0/24"]
+  location            = azurerm_resource_group.frankfurt-vnet-student.location
+  resource_group_name = azurerm_resource_group.frankfurt-vnet-student.name
+}
+
+resource "azurerm_subnet" "frankfurt-vnet-student-subnets" {
+  count                = 1
+  name                 = "subnet-${count.index}"
+  resource_group_name  = azurerm_resource_group.frankfurt-vnet-student.name
+  virtual_network_name = azurerm_virtual_network.frankfurt-vnet-student.name
+  address_prefixes     = ["10.150.8.0/25"]
+}
+
+# Student 9
+resource "azurerm_resource_group" "tokyo-vnet-student" {
+  name     = "tokyo-vnet-student"
+  location = "Japan East"
+}
+
+resource "azurerm_virtual_network" "tokyo-vnet-student" {
+  name                = "tokyo-vnet-student"
+  address_space       = ["10.150.9.0/24"]
+  location            = azurerm_resource_group.tokyo-vnet-student.location
+  resource_group_name = azurerm_resource_group.tokyo-vnet-student.name
+}
+
+resource "azurerm_subnet" "tokyo-vnet-student-subnets" {
+  count                = 1
+  name                 = "subnet-${count.index}"
+  resource_group_name  = azurerm_resource_group.tokyo-vnet-student.name
+  virtual_network_name = azurerm_virtual_network.tokyo-vnet-student.name
+  address_prefixes     = ["10.150.9.0/25"]
+}
+
+# Student 10
+resource "azurerm_resource_group" "ohio-vnet-student" {
+  name     = "ohio-vnet-student"
+  location = "North Central US"
+}
+
+resource "azurerm_virtual_network" "ohio-vnet-student" {
+  name                = "ohio-vnet-student"
+  address_space       = ["10.150.10.0/24"]
+  location            = azurerm_resource_group.ohio-vnet-student.location
+  resource_group_name = azurerm_resource_group.ohio-vnet-student.name
+}
+
+resource "azurerm_subnet" "ohio-vnet-student-subnets" {
+  count                = 1
+  name                 = "subnet-${count.index}"
+  resource_group_name  = azurerm_resource_group.ohio-vnet-student.name
+  virtual_network_name = azurerm_virtual_network.ohio-vnet-student.name
+  address_prefixes     = ["10.150.10.0/25"]
+}
+
+# Student 11
+resource "azurerm_resource_group" "singapore-vnet-student" {
+  name     = "singapore-vnet-student"
+  location = "Southeast Asia"
+}
+
+resource "azurerm_virtual_network" "singapore-vnet-student" {
+  name                = "singapore-vnet-student"
+  address_space       = ["10.150.11.0/24"]
+  location            = azurerm_resource_group.singapore-vnet-student.location
+  resource_group_name = azurerm_resource_group.singapore-vnet-student.name
+}
+
+resource "azurerm_subnet" "singapore-vnet-student-subnets" {
+  count                = 1
+  name                 = "subnet-${count.index}"
+  resource_group_name  = azurerm_resource_group.singapore-vnet-student.name
+  virtual_network_name = azurerm_virtual_network.singapore-vnet-student.name
+  address_prefixes     = ["10.150.11.0/25"]
+}

@@ -154,322 +154,322 @@ resource "aws_subnet" "ianplummer-subnet2" {
   }
 }
 
-########################################################
-# Cusotmer Lab
+# ########################################################
+# # Cusotmer Lab
 
-# Student 1 (ap-southeast-2)
-resource "aws_vpc" "sydney-vpc-student1" {
-  provider   = aws.ap-southeast-2
-  cidr_block = "10.100.1.0/24"
-  tags = {
-    Name = "sydney-vpc"
-  }
-}
-resource "aws_subnet" "sydney-subnet1" {
-  provider          = aws.ap-southeast-2
-  vpc_id            = aws_vpc.sydney-vpc-student1.id
-  cidr_block        = "10.100.1.0/25"
-  availability_zone = "ap-southeast-2a"
-  tags = {
-    Name = "sydney-subnet1"
-  }
-}
-resource "aws_subnet" "sydney-subnet2" {
-  provider          = aws.ap-southeast-2
-  vpc_id            = aws_vpc.sydney-vpc-student1.id
-  cidr_block        = "10.100.1.128/25"
-  availability_zone = "ap-southeast-2b"
-  tags = {
-    Name = "sydney-subnet2"
-  }
-}
+# # Student 1 (ap-southeast-2)
+# resource "aws_vpc" "sydney-vpc-student1" {
+#   provider   = aws.ap-southeast-2
+#   cidr_block = "10.100.1.0/24"
+#   tags = {
+#     Name = "sydney-vpc"
+#   }
+# }
+# resource "aws_subnet" "sydney-subnet1" {
+#   provider          = aws.ap-southeast-2
+#   vpc_id            = aws_vpc.sydney-vpc-student1.id
+#   cidr_block        = "10.100.1.0/25"
+#   availability_zone = "ap-southeast-2a"
+#   tags = {
+#     Name = "sydney-subnet1"
+#   }
+# }
+# resource "aws_subnet" "sydney-subnet2" {
+#   provider          = aws.ap-southeast-2
+#   vpc_id            = aws_vpc.sydney-vpc-student1.id
+#   cidr_block        = "10.100.1.128/25"
+#   availability_zone = "ap-southeast-2b"
+#   tags = {
+#     Name = "sydney-subnet2"
+#   }
+# }
 
-# Student 2 (ap-south-1)
-resource "aws_vpc" "mumbai-vpc-student2" {
-  provider             = aws.ap-south-1
-  cidr_block           = "10.100.2.0/24"
-  enable_dns_support   = true
-  enable_dns_hostnames = true
-  tags = {
-    Name = "mumbai-vpc"
-  }
-}
-resource "aws_subnet" "mumbai-subnet1" {
-  provider          = aws.ap-south-1
-  vpc_id            = aws_vpc.mumbai-vpc-student2.id
-  cidr_block        = "10.100.2.0/25"
-  availability_zone = "ap-south-1a"
-  tags = {
-    Name = "mumbai-subnet1"
-  }
-}
-resource "aws_subnet" "mumbai-subnet2" {
-  provider          = aws.ap-south-1
-  vpc_id            = aws_vpc.mumbai-vpc-student2.id
-  cidr_block        = "10.100.2.128/25"
-  availability_zone = "ap-south-1b"
-  tags = {
-    Name = "mumbai-subnet2"
-  }
-}
+# # Student 2 (ap-south-1)
+# resource "aws_vpc" "mumbai-vpc-student2" {
+#   provider             = aws.ap-south-1
+#   cidr_block           = "10.100.2.0/24"
+#   enable_dns_support   = true
+#   enable_dns_hostnames = true
+#   tags = {
+#     Name = "mumbai-vpc"
+#   }
+# }
+# resource "aws_subnet" "mumbai-subnet1" {
+#   provider          = aws.ap-south-1
+#   vpc_id            = aws_vpc.mumbai-vpc-student2.id
+#   cidr_block        = "10.100.2.0/25"
+#   availability_zone = "ap-south-1a"
+#   tags = {
+#     Name = "mumbai-subnet1"
+#   }
+# }
+# resource "aws_subnet" "mumbai-subnet2" {
+#   provider          = aws.ap-south-1
+#   vpc_id            = aws_vpc.mumbai-vpc-student2.id
+#   cidr_block        = "10.100.2.128/25"
+#   availability_zone = "ap-south-1b"
+#   tags = {
+#     Name = "mumbai-subnet2"
+#   }
+# }
 
-# Student 3 (us-east-1)
-resource "aws_vpc" "virginia-vpc-student3" {
-  provider             = aws.us-east-1
-  cidr_block           = "10.100.3.0/24"
-  enable_dns_support   = true
-  enable_dns_hostnames = true
-  tags = {
-    Name = "virginia-vpc"
-  }
-}
-resource "aws_subnet" "virginia-subnet1" {
-  provider          = aws.us-east-1
-  vpc_id            = aws_vpc.virginia-vpc-student3.id
-  cidr_block        = "10.100.3.0/25"
-  availability_zone = "us-east-1a"
-  tags = {
-    Name = "virginia-subnet1"
-  }
-}
-resource "aws_subnet" "virginia-subnet2" {
-  provider          = aws.us-east-1
-  vpc_id            = aws_vpc.virginia-vpc-student3.id
-  cidr_block        = "10.100.3.128/25"
-  availability_zone = "us-east-1b"
-  tags = {
-    Name = "virginia-subnet2"
-  }
-}
+# # Student 3 (us-east-1)
+# resource "aws_vpc" "virginia-vpc-student3" {
+#   provider             = aws.us-east-1
+#   cidr_block           = "10.100.3.0/24"
+#   enable_dns_support   = true
+#   enable_dns_hostnames = true
+#   tags = {
+#     Name = "virginia-vpc"
+#   }
+# }
+# resource "aws_subnet" "virginia-subnet1" {
+#   provider          = aws.us-east-1
+#   vpc_id            = aws_vpc.virginia-vpc-student3.id
+#   cidr_block        = "10.100.3.0/25"
+#   availability_zone = "us-east-1a"
+#   tags = {
+#     Name = "virginia-subnet1"
+#   }
+# }
+# resource "aws_subnet" "virginia-subnet2" {
+#   provider          = aws.us-east-1
+#   vpc_id            = aws_vpc.virginia-vpc-student3.id
+#   cidr_block        = "10.100.3.128/25"
+#   availability_zone = "us-east-1b"
+#   tags = {
+#     Name = "virginia-subnet2"
+#   }
+# }
 
-# Student 4 (eu-west-1)
-resource "aws_vpc" "ireland-vpc-student4" {
-  provider             = aws.eu-west-1
-  cidr_block           = "10.100.4.0/24"
-  enable_dns_support   = true
-  enable_dns_hostnames = true
-  tags = {
-    Name = "ireland-vpc"
-  }
-}
-resource "aws_subnet" "ireland-subnet1" {
-  provider          = aws.eu-west-1
-  vpc_id            = aws_vpc.ireland-vpc-student4.id
-  cidr_block        = "10.100.4.0/25"
-  availability_zone = "eu-west-1a"
-  tags = {
-    Name = "ireland-subnet1"
-  }
-}
-resource "aws_subnet" "ireland-subnet2" {
-  provider          = aws.eu-west-1
-  vpc_id            = aws_vpc.ireland-vpc-student4.id
-  cidr_block        = "10.100.4.128/25"
-  availability_zone = "eu-west-1b"
-  tags = {
-    Name = "ireland-subnet2"
-  }
-}
+# # Student 4 (eu-west-1)
+# resource "aws_vpc" "ireland-vpc-student4" {
+#   provider             = aws.eu-west-1
+#   cidr_block           = "10.100.4.0/24"
+#   enable_dns_support   = true
+#   enable_dns_hostnames = true
+#   tags = {
+#     Name = "ireland-vpc"
+#   }
+# }
+# resource "aws_subnet" "ireland-subnet1" {
+#   provider          = aws.eu-west-1
+#   vpc_id            = aws_vpc.ireland-vpc-student4.id
+#   cidr_block        = "10.100.4.0/25"
+#   availability_zone = "eu-west-1a"
+#   tags = {
+#     Name = "ireland-subnet1"
+#   }
+# }
+# resource "aws_subnet" "ireland-subnet2" {
+#   provider          = aws.eu-west-1
+#   vpc_id            = aws_vpc.ireland-vpc-student4.id
+#   cidr_block        = "10.100.4.128/25"
+#   availability_zone = "eu-west-1b"
+#   tags = {
+#     Name = "ireland-subnet2"
+#   }
+# }
 
-# Student 5 (ap-east-1)
-resource "aws_vpc" "hongkong-vpc-student5" {
-  provider             = aws.ap-east-1
-  cidr_block           = "10.100.5.0/24"
-  enable_dns_support   = true
-  enable_dns_hostnames = true
-  tags = {
-    Name = "hongkong-vpc"
-  }
-}
-resource "aws_subnet" "hongkong-subnet1" {
-  provider          = aws.ap-east-1
-  vpc_id            = aws_vpc.hongkong-vpc-student5.id
-  cidr_block        = "10.100.5.0/25"
-  availability_zone = "ap-east-1a"
-  tags = {
-    Name = "hongkong-subnet1"
-  }
-}
-resource "aws_subnet" "hongkong-subnet2" {
-  provider          = aws.ap-east-1
-  vpc_id            = aws_vpc.hongkong-vpc-student5.id
-  cidr_block        = "10.100.5.128/25"
-  availability_zone = "ap-east-1b"
-  tags = {
-    Name = "hongkong-subnet2"
-  }
-}
+# # Student 5 (ap-east-1)
+# resource "aws_vpc" "hongkong-vpc-student5" {
+#   provider             = aws.ap-east-1
+#   cidr_block           = "10.100.5.0/24"
+#   enable_dns_support   = true
+#   enable_dns_hostnames = true
+#   tags = {
+#     Name = "hongkong-vpc"
+#   }
+# }
+# resource "aws_subnet" "hongkong-subnet1" {
+#   provider          = aws.ap-east-1
+#   vpc_id            = aws_vpc.hongkong-vpc-student5.id
+#   cidr_block        = "10.100.5.0/25"
+#   availability_zone = "ap-east-1a"
+#   tags = {
+#     Name = "hongkong-subnet1"
+#   }
+# }
+# resource "aws_subnet" "hongkong-subnet2" {
+#   provider          = aws.ap-east-1
+#   vpc_id            = aws_vpc.hongkong-vpc-student5.id
+#   cidr_block        = "10.100.5.128/25"
+#   availability_zone = "ap-east-1b"
+#   tags = {
+#     Name = "hongkong-subnet2"
+#   }
+# }
 
-# Student 6 (us-west-1)
-resource "aws_vpc" "california-vpc-student6" {
-  provider             = aws.us-west-1
-  cidr_block           = "10.100.6.0/24"
-  enable_dns_support   = true
-  enable_dns_hostnames = true
-  tags = {
-    Name = "california-vpc"
-  }
-}
-resource "aws_subnet" "california-subnet1" {
-  provider          = aws.us-west-1
-  vpc_id            = aws_vpc.california-vpc-student6.id
-  cidr_block        = "10.100.6.0/25"
-  availability_zone = "us-west-1b"
-  tags = {
-    Name = "california-subnet1"
-  }
-}
-resource "aws_subnet" "california-subnet2" {
-  provider          = aws.us-west-1
-  vpc_id            = aws_vpc.california-vpc-student6.id
-  cidr_block        = "10.100.6.128/25"
-  availability_zone = "us-west-1c"
-  tags = {
-    Name = "california-subnet2"
-  }
-}
+# # Student 6 (us-west-1)
+# resource "aws_vpc" "california-vpc-student6" {
+#   provider             = aws.us-west-1
+#   cidr_block           = "10.100.6.0/24"
+#   enable_dns_support   = true
+#   enable_dns_hostnames = true
+#   tags = {
+#     Name = "california-vpc"
+#   }
+# }
+# resource "aws_subnet" "california-subnet1" {
+#   provider          = aws.us-west-1
+#   vpc_id            = aws_vpc.california-vpc-student6.id
+#   cidr_block        = "10.100.6.0/25"
+#   availability_zone = "us-west-1b"
+#   tags = {
+#     Name = "california-subnet1"
+#   }
+# }
+# resource "aws_subnet" "california-subnet2" {
+#   provider          = aws.us-west-1
+#   vpc_id            = aws_vpc.california-vpc-student6.id
+#   cidr_block        = "10.100.6.128/25"
+#   availability_zone = "us-west-1c"
+#   tags = {
+#     Name = "california-subnet2"
+#   }
+# }
 
-# Student 7 (us-west-2)
-resource "aws_vpc" "oregon-vpc-student7" {
-  provider             = aws.us-west-2
-  cidr_block           = "10.100.7.0/24"
-  enable_dns_support   = true
-  enable_dns_hostnames = true
-  tags = {
-    Name = "oregon-vpc"
-  }
-}
-resource "aws_subnet" "oregon-subnet1" {
-  provider          = aws.us-west-2
-  vpc_id            = aws_vpc.oregon-vpc-student7.id
-  cidr_block        = "10.100.7.0/25"
-  availability_zone = "us-west-2a"
-  tags = {
-    Name = "oregon-subnet1"
-  }
-}
-resource "aws_subnet" "oregon-subnet2" {
-  provider          = aws.us-west-2
-  vpc_id            = aws_vpc.oregon-vpc-student7.id
-  cidr_block        = "10.100.7.128/25"
-  availability_zone = "us-west-2b"
-  tags = {
-    Name = "oregon-subnet2"
-  }
-}
+# # Student 7 (us-west-2)
+# resource "aws_vpc" "oregon-vpc-student7" {
+#   provider             = aws.us-west-2
+#   cidr_block           = "10.100.7.0/24"
+#   enable_dns_support   = true
+#   enable_dns_hostnames = true
+#   tags = {
+#     Name = "oregon-vpc"
+#   }
+# }
+# resource "aws_subnet" "oregon-subnet1" {
+#   provider          = aws.us-west-2
+#   vpc_id            = aws_vpc.oregon-vpc-student7.id
+#   cidr_block        = "10.100.7.0/25"
+#   availability_zone = "us-west-2a"
+#   tags = {
+#     Name = "oregon-subnet1"
+#   }
+# }
+# resource "aws_subnet" "oregon-subnet2" {
+#   provider          = aws.us-west-2
+#   vpc_id            = aws_vpc.oregon-vpc-student7.id
+#   cidr_block        = "10.100.7.128/25"
+#   availability_zone = "us-west-2b"
+#   tags = {
+#     Name = "oregon-subnet2"
+#   }
+# }
 
-# Student 8 (eu-central-1)
-resource "aws_vpc" "frankfurt-vpc-student8" {
-  provider             = aws.eu-central-1
-  cidr_block           = "10.100.8.0/24"
-  enable_dns_support   = true
-  enable_dns_hostnames = true
-  tags = {
-    Name = "frankfurt-vpc"
-  }
-}
-resource "aws_subnet" "frankfurt-subnet1" {
-  provider          = aws.eu-central-1
-  vpc_id            = aws_vpc.frankfurt-vpc-student8.id
-  cidr_block        = "10.100.8.0/25"
-  availability_zone = "eu-central-1a"
-  tags = {
-    Name = "frankfurt-subnet1"
-  }
-}
-resource "aws_subnet" "frankfurt-subnet2" {
-  provider          = aws.eu-central-1
-  vpc_id            = aws_vpc.frankfurt-vpc-student8.id
-  cidr_block        = "10.100.8.128/25"
-  availability_zone = "eu-central-1b"
-  tags = {
-    Name = "frankfurt-subnet2"
-  }
-}
+# # Student 8 (eu-central-1)
+# resource "aws_vpc" "frankfurt-vpc-student8" {
+#   provider             = aws.eu-central-1
+#   cidr_block           = "10.100.8.0/24"
+#   enable_dns_support   = true
+#   enable_dns_hostnames = true
+#   tags = {
+#     Name = "frankfurt-vpc"
+#   }
+# }
+# resource "aws_subnet" "frankfurt-subnet1" {
+#   provider          = aws.eu-central-1
+#   vpc_id            = aws_vpc.frankfurt-vpc-student8.id
+#   cidr_block        = "10.100.8.0/25"
+#   availability_zone = "eu-central-1a"
+#   tags = {
+#     Name = "frankfurt-subnet1"
+#   }
+# }
+# resource "aws_subnet" "frankfurt-subnet2" {
+#   provider          = aws.eu-central-1
+#   vpc_id            = aws_vpc.frankfurt-vpc-student8.id
+#   cidr_block        = "10.100.8.128/25"
+#   availability_zone = "eu-central-1b"
+#   tags = {
+#     Name = "frankfurt-subnet2"
+#   }
+# }
 
-# Student 9 (ap-northeast-1)
-resource "aws_vpc" "tokyo-vpc-student9" {
-  provider             = aws.ap-northeast-1
-  cidr_block           = "10.100.9.0/24"
-  enable_dns_support   = true
-  enable_dns_hostnames = true
-  tags = {
-    Name = "tokyo-vpc"
-  }
-}
-resource "aws_subnet" "tokyo-subnet1" {
-  provider          = aws.ap-northeast-1
-  vpc_id            = aws_vpc.tokyo-vpc-student9.id
-  cidr_block        = "10.100.9.0/25"
-  availability_zone = "ap-northeast-1a"
-  tags = {
-    Name = "tokyo-subnet1"
-  }
-}
-resource "aws_subnet" "tokyo-subnet2" {
-  provider          = aws.ap-northeast-1
-  vpc_id            = aws_vpc.tokyo-vpc-student9.id
-  cidr_block        = "10.100.9.128/25"
-  availability_zone = "ap-northeast-1c"
-  tags = {
-    Name = "tokyo-subnet2"
-  }
-}
+# # Student 9 (ap-northeast-1)
+# resource "aws_vpc" "tokyo-vpc-student9" {
+#   provider             = aws.ap-northeast-1
+#   cidr_block           = "10.100.9.0/24"
+#   enable_dns_support   = true
+#   enable_dns_hostnames = true
+#   tags = {
+#     Name = "tokyo-vpc"
+#   }
+# }
+# resource "aws_subnet" "tokyo-subnet1" {
+#   provider          = aws.ap-northeast-1
+#   vpc_id            = aws_vpc.tokyo-vpc-student9.id
+#   cidr_block        = "10.100.9.0/25"
+#   availability_zone = "ap-northeast-1a"
+#   tags = {
+#     Name = "tokyo-subnet1"
+#   }
+# }
+# resource "aws_subnet" "tokyo-subnet2" {
+#   provider          = aws.ap-northeast-1
+#   vpc_id            = aws_vpc.tokyo-vpc-student9.id
+#   cidr_block        = "10.100.9.128/25"
+#   availability_zone = "ap-northeast-1c"
+#   tags = {
+#     Name = "tokyo-subnet2"
+#   }
+# }
 
-# Student 10 (us-east-2)
-resource "aws_vpc" "ohio-vpc-student10" {
-  provider             = aws.us-east-2
-  cidr_block           = "10.100.10.0/24"
-  enable_dns_support   = true
-  enable_dns_hostnames = true
-  tags = {
-    Name = "ohio-vpc"
-  }
-}
-resource "aws_subnet" "ohio-subnet1" {
-  provider          = aws.us-east-2
-  vpc_id            = aws_vpc.ohio-vpc-student10.id
-  cidr_block        = "10.100.10.0/25"
-  availability_zone = "us-east-2a"
-  tags = {
-    Name = "ohio-subnet1"
-  }
-}
-resource "aws_subnet" "ohio-subnet2" {
-  provider          = aws.us-east-2
-  vpc_id            = aws_vpc.ohio-vpc-student10.id
-  cidr_block        = "10.100.10.128/25"
-  availability_zone = "us-east-2b"
-  tags = {
-    Name = "ohio-subnet2"
-  }
-}
+# # Student 10 (us-east-2)
+# resource "aws_vpc" "ohio-vpc-student10" {
+#   provider             = aws.us-east-2
+#   cidr_block           = "10.100.10.0/24"
+#   enable_dns_support   = true
+#   enable_dns_hostnames = true
+#   tags = {
+#     Name = "ohio-vpc"
+#   }
+# }
+# resource "aws_subnet" "ohio-subnet1" {
+#   provider          = aws.us-east-2
+#   vpc_id            = aws_vpc.ohio-vpc-student10.id
+#   cidr_block        = "10.100.10.0/25"
+#   availability_zone = "us-east-2a"
+#   tags = {
+#     Name = "ohio-subnet1"
+#   }
+# }
+# resource "aws_subnet" "ohio-subnet2" {
+#   provider          = aws.us-east-2
+#   vpc_id            = aws_vpc.ohio-vpc-student10.id
+#   cidr_block        = "10.100.10.128/25"
+#   availability_zone = "us-east-2b"
+#   tags = {
+#     Name = "ohio-subnet2"
+#   }
+# }
 
-# Student X (ap-southeast-1)
-resource "aws_vpc" "singapore-vpc-student11" {
-  provider             = aws.ap-southeast-1
-  cidr_block           = "10.100.11.0/24"
-  enable_dns_support   = true
-  enable_dns_hostnames = true
-  tags = {
-    Name = "singapore-vpc"
-  }
-}
-resource "aws_subnet" "singapore-subnet1" {
-  provider          = aws.ap-southeast-1
-  vpc_id            = aws_vpc.singapore-vpc-student11.id
-  cidr_block        = "10.100.11.0/25"
-  availability_zone = "ap-southeast-1a"
-  tags = {
-    Name = "singapore-subnet1"
-  }
-}
-resource "aws_subnet" "singapore-subnet2" {
-  provider          = aws.ap-southeast-1
-  vpc_id            = aws_vpc.singapore-vpc-student11.id
-  cidr_block        = "10.100.11.128/25"
-  availability_zone = "ap-southeast-1b"
-  tags = {
-    Name = "singapore-subnet2"
-  }
-}
+# # Student X (ap-southeast-1)
+# resource "aws_vpc" "singapore-vpc-student11" {
+#   provider             = aws.ap-southeast-1
+#   cidr_block           = "10.100.11.0/24"
+#   enable_dns_support   = true
+#   enable_dns_hostnames = true
+#   tags = {
+#     Name = "singapore-vpc"
+#   }
+# }
+# resource "aws_subnet" "singapore-subnet1" {
+#   provider          = aws.ap-southeast-1
+#   vpc_id            = aws_vpc.singapore-vpc-student11.id
+#   cidr_block        = "10.100.11.0/25"
+#   availability_zone = "ap-southeast-1a"
+#   tags = {
+#     Name = "singapore-subnet1"
+#   }
+# }
+# resource "aws_subnet" "singapore-subnet2" {
+#   provider          = aws.ap-southeast-1
+#   vpc_id            = aws_vpc.singapore-vpc-student11.id
+#   cidr_block        = "10.100.11.128/25"
+#   availability_zone = "ap-southeast-1b"
+#   tags = {
+#     Name = "singapore-subnet2"
+#   }
+# }
